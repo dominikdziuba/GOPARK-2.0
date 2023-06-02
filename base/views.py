@@ -1,11 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-def home(request):
-    return render(request, 'home.html')
-
-def cars(request):
-    return HttpResponse('Cars')
-
-def payments(request):
-    return HttpResponse('Payments')
+from rest_framework import generics
+from .models.Cars import *
+class CarsView(generics.CreateAPIView):
+    queryset = Cars.objects.all()
+    serializer_class = CarsSerializer

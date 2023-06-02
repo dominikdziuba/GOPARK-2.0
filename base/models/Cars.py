@@ -6,7 +6,7 @@ class Cars(models.Model):
     brand = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
     register_num = models.CharField(max_length=100)
-    image = models.ImageField()
+    image = models.CharField()
 
 class Meta:
     app_label = 'base'
