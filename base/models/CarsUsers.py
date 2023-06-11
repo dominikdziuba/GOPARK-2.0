@@ -1,10 +1,10 @@
 from django.db import models
 from rest_framework import serializers
-from .Users import Users
+from .User import User
 from .Cars import Cars
 
 class CarsUsers(models.Model):
-    id_usersFK = models.ForeignKey(Users, on_delete=models.CASCADE)
+    id_usersFK = models.ForeignKey(User, on_delete=models.CASCADE)
     id_carsFK = models.ForeignKey(Cars, on_delete=models.CASCADE)
 
 class Meta:

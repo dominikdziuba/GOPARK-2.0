@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#AUTH_USER_MODEL = 'base.User'
+
+
+AUTHENTICATION_BACKENDS = [
+    'base.models.User.UserBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Application definition
 
@@ -39,8 +46,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'rest_framework',
-    'frontend.apps.FrontendConfig'
+    'rest_framework.authtoken',
+    'frontend.apps.FrontendConfig',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,12 +95,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': '74ePSRENTxrKE8UpAM0b',
-        'HOST': 'containers-us-west-156.railway.app',
-        'PORT': '7525',
+        'PASSWORD': 'ureXcL15rPc4gX1QuN3X',
+        'HOST': 'containers-us-west-89.railway.app',
+        'PORT': '7529',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -129,3 +141,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'base/'
+LOGOUT_REDIRECT_URL = 'base/login'

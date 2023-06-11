@@ -1,0 +1,258 @@
+body{
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo > img{
+    width: 90%;
+}
+
+.login_container{
+    width: 50vw;
+    height: 51vh;
+}
+
+form.login, form.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+button{
+    background: #00C29F;
+    border-radius: 30px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 3em;
+    line-height: 2.5em;
+
+}
+
+input, select{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+}
+
+@media only screen and (max-device-width: 420px){
+
+    .logo{
+        height: 23vh;
+        width: 85vw;
+    }
+
+
+    .login-container{
+        width: 85vw;
+        height: 31vh;
+    }
+
+    form{
+        margin: auto;
+        height: 20vh;
+        width: 90%;
+    }
+
+
+
+}
+
+.base-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+nav{
+    width: 20vw;
+    height: 100%;
+background: #000000;
+
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+
+main {
+    width: 80vw;
+}
+
+nav>img {
+    width: 80%;
+    margin: 2em auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+}
+
+li i {
+    font-size: 1.5em;
+}
+
+.button {
+    border: 3px solid #D9D9D9;
+    border-radius: 1em;
+    margin-left: 2em;
+
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #D9D9D9;
+    padding: 0.2rem;
+    width: 60%;
+}
+
+
+ul {
+    list-style-type: none;
+    font: normal normal normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    color: #D9D9D9;
+    height: 100%;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+
+}
+
+
+li {
+    text-align: left;
+    color: #D9D9D9;
+    margin-bottom: 1em;
+}
+
+li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    border-bottom: 1px solid gray;
+}
+
+.go-back{
+    background: #000000;
+    border-radius: 1.5em;
+    color: #D9D9D9;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 30%;
+}
+.logout{
+    background: #B10D0D;
+
+    border-radius: 1em;
+    margin-left: 2em;
+
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #D9D9D9;
+    padding: 0.2rem;
+    width: 15%;
+}
+
+.button-logout {
+
+    border-radius: 1em;
+    margin-left: 2em;
+
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #D9D9D9;
+    padding: 0.2rem;
+    width: 60%;
+}
+.no-valid{
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: lightgray;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    padding: 2em;
+    overflow: auto;
+
+}
+
+
+.cars>div>img{
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:1em 1em 0 0 ;
+}
+
+.cars>div>div{
+    height: 50%;
+    color: black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font: normal normal normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    color: #D9D9D9;
+}
+
+.cars>div{
+    border:1px solid gray;
+    border-radius:1em 1em 0 0 ;
+    height: 400px;
+}
