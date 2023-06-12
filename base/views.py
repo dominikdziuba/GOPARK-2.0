@@ -5,4 +5,3 @@ from rest_framework.permissions import IsAuthenticated
 from .models.Cars import *
 from.models.Payments import *
 
-
