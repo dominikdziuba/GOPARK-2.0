@@ -1,1 +1,4 @@
 .idea/
+.__pychache__/
+.base/__pychache__/
+.frontend/__pychache__/
