@@ -15,11 +15,11 @@ from.models.Payments import *
 
 class CarsView(APIView):
     permission_classes = [IsAuthenticated]
+    
     def get(self, request):
-        cars = Cars.objects.filter(owner=request.user)
+        cars = Cars.objects.filter(owner = request.user)
         serializer = CarsSerializer(cars, many=True)
         return Response(serializer.data)
-    
     def post(self, request):
         serializer = CarsSerializer(data=request.data)
         if serializer.is_valid():

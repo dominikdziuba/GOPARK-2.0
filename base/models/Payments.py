@@ -7,7 +7,7 @@ class Payments(models.Model):
     street_name = models.CharField(max_length=100)
     register_number = models.CharField(max_length=100)
     parking_time = models.CharField(max_length=100)
-    car = models.ForeignKey(Cars, on_delete=models.CASCADE, default= None)
+    car = models.ForeignKey(Cars, on_delete=models.CASCADE, default= 1)
 
 
 
