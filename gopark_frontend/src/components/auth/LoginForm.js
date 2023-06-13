@@ -31,8 +31,8 @@ const LoginForm = () => {
         const token = response.data.access;
         localStorage.setItem('access', token);
         localStorage.setItem('refresh', response.data.refresh);
-        axios.defaults.headers.common['Authorization'] = `JWT ${token}`;
-        navigate('/boards');
+        axios.defaults.headers.common['Authorization'] = `JWT  ${token}`;
+        navigate('/cars');
       })
       .catch((error) => {
         setMessage('Niepoprawne dane logowania');
@@ -71,9 +71,6 @@ const LoginForm = () => {
                 <button type="submit" className="LoginBtn">Zaloguj się</button>
               </form>
               {message && <p>{message}</p>}
-              <button className="RegisterBtn" onClick={handleRegister}>
-                Zarejestruj się
-              </button>
             </div>
         </div>
     </div>
